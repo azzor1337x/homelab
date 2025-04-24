@@ -259,8 +259,6 @@ sudo cloudflared tunnel create blog
 
 Copie o nome do túnel (UUID).
 
----
-
 ## ⚙️ Configuração do Túnel
 
 ```bash
