@@ -10,12 +10,14 @@
 sudo apt install -y icecast2
 ```
 
+---
+
+## 🎧 Liquidsoap
+
 ```bash
 sudo mkdir -p /opt/liquidsoap
 sudo nano /opt/liquidsoap/docker-compose.yml
 ```
-
----
 
 ## 📋 docker-compose.yml
 
