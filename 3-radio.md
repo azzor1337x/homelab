@@ -4,6 +4,8 @@
 
 ---
 
+## 🌐 Instalar Icecast2
+
 ```bash
 sudo apt install -y icecast2
 ```
@@ -12,6 +14,8 @@ sudo apt install -y icecast2
 sudo mkdir -p /opt/liquidsoap
 sudo nano /opt/liquidsoap/docker-compose.yml
 ```
+
+---
 
 ## 📋 docker-compose.yml
 
@@ -59,3 +63,6 @@ sudo systemctl start icecast2
 cd /opt/liquidsoap
 sudo docker-compose up -d
 ```
+
+---
+
