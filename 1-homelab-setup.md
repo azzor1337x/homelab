@@ -9,8 +9,6 @@
 
 # 🛠️ Transformando um notebook antigo em um homelab funcional, moderno e enxuto 🚀
 
----
-
 ## 📦 Pré-Instalação: Limpando o Disco
 
 1. No instalador do Debian, pressione `Ctrl + Alt + F2` para abrir o terminal.
