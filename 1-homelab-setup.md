@@ -7,7 +7,7 @@
 ![Pi-hole](https://img.shields.io/badge/pi--hole-dns%20%2F%20dhcp-red?logo=pi-hole&logoColor=white)
 ![Portainer](https://img.shields.io/badge/portainer-docker--ui-0db7ed?logo=portainer&logoColor=white)
 
-# 🛠️ Homelab Setup - Debian 12 Minimal com LVM, Docker, Docker-Compose, Unbound, Pi-hole e Portainer
+# 🛠️ Transformando um notebook antigo em um homelab funcional, moderno e enxuto 🚀
 
 ---
 
