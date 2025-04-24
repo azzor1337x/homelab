@@ -4,11 +4,15 @@
 
 ---
 
-## 📺 metube
+## ⚙️ Criar pasta das musicas
 
 ```bash
 sudo mkdir -p /home/homelab/music
 ```
+
+---
+
+## 📺 metube
 
 ```bash
 sudo mkdir -p /opt/metube
