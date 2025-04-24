@@ -243,6 +243,13 @@ Comentar #nameserver 192.168.1.1 e descomentar: `127.0.0.1`
 ```bash
 sudo nano /etc/resolv.conf
 ```
+---
+
+### ⚙️ Ultimo Reboot
+
+```bash
+sudo reboot
+```
 
 ---
 
