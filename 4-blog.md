@@ -144,7 +144,7 @@ Conteúdo Página Principal (blog):
   <section class="hero">
     <h1>Homelab</h1>
     <p>
-      Ola, espero que esteja bem! Esse é meu homelab e acredite eu rodo ele em um notebook antigo, ASUSTeK K43U com processador AMD C-60 de apenas 1GHZ, duas memorias DDR3 de 4 GB de RAM. Nele estão alguns serviços úteis e divertidos para uso pessoal e aprendizado, em breve mais novidades!
+      Ola, espero que esteja bem! Esse é meu homelab e acredite eu rodo ele em um notebook antigo, ASUSTeK K43U com processador AMD C-60 de apenas 1GHz, duas memorias DDR3. Nele estão alguns serviços úteis e divertidos para uso pessoal e aprendizado, em breve mais novidades!
     </p>
     <div class="button-row">
       <a class="btn" href="https://radio.azzor1337x.shop/radio.mp3" target="_blank">Rádio</a>
