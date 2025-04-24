@@ -9,17 +9,6 @@
 
 # 🛠️ Homelab Setup - Debian 12 Minimal com LVM, Docker, Docker-Compose, Unbound, Pi-hole e Portainer
 
-## 📋 Sumário
-
-- [📦 Pré-Instalação: Limpando o Disco](#pré-instalação-limpando-o-disco)
-- [🧱 Particionamento Manual com LVM](#particionamento-manual-com-lvm)
-- [🌐 Configuração de Rede com IP Fixo](#configuração-de-rede-com-ip-fixo)
-- [🐳 Instalar Docker + Docker Compose](#instalar-docker--docker-compose)
-- [🔐 Configurar Unbound como DNS Recursivo](#configurar-unbound-como-dns-recursivo)
-- [❌ Instalar Pi-hole com Docker](#instalar-pi-hole-com-docker)
-- [📊 Instalar Portainer](#instalar-portainer)
-- [✅ Testes Finais](#testes-finais)
-
 ---
 
 ## 📦 Pré-Instalação: Limpando o Disco
@@ -44,7 +33,8 @@
      - `home` → 10 GB
      - `var` → 10 GB
      - `opt` → 10 GB
-     - `swap` → 8 GB
+     - `usr` → 10 GB
+     - `swap` → 2 GB
 4. Defina os pontos de montagem:
 
 | Montagem | Tipo | Dispositivo |
@@ -53,6 +43,7 @@
 | `/home`  | ext4 | `/dev/mapper/homelab-home` |
 | `/var`   | ext4 | `/dev/mapper/homelab-var` |
 | `/opt`   | ext4 | `/dev/mapper/homelab-opt` |
+| `/usr`   | ext4 | `/dev/mapper/homelab-opt` |
 | swap     | swap | `/dev/mapper/homelab-swap` |
 
 ---
@@ -294,6 +285,8 @@ docker network ls
 docker volume ls
 docker compose ls
 docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+journalctl -p err..warning
+systemctl list-units --type=service --all
 ```
 
 ---
