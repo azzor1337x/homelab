@@ -100,7 +100,7 @@ DNS=192.168.1.1
 
 ---
 
-### 🔧 resolv.conf
+## 🔧 resolv.conf
 
 ```bash
 sudo rm /etc/resolv.conf
@@ -114,7 +114,7 @@ nameserver 192.168.1.1
 
 ---
 
-### ⚙️ Ativar systemd-networkd
+## ⚙️ Ativar systemd-networkd
 
 ```bash
 sudo systemctl enable --now systemd-networkd
@@ -245,7 +245,7 @@ sudo nano /etc/resolv.conf
 ```
 ---
 
-### ⚙️ Ultimo Reboot
+## ⚙️ Ultimo Reboot
 
 ```bash
 sudo reboot
@@ -279,23 +279,6 @@ volumes:
 ```bash
 cd /opt/portainer
 sudo docker-compose up -d
-```
-
----
-
-## ✅ Testes Finais
-
-```bash
-ip -c a
-hostname -I
-docker ps -a
-docker images
-docker network ls
-docker volume ls
-docker compose ls
-docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
-journalctl -p err..warning
-systemctl list-units --type=service --all
 ```
 
 ---
