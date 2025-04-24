@@ -37,7 +37,7 @@ sudo nano /opt/liquidsoap/radio.liq
 
 ```liq
 radio_playlist = playlist(mode="normal", reload_mode="watch", "/home/music")
-crossfaded = crossfade(fade_in=2.0, fade_out=2.0, radio_playlist)
+crossfaded = crossfade(fade_in=5.0, fade_out=5.0, radio_playlist)
 crossfaded = amplify(0.5, crossfaded)
 radio = fallback(track_sensitive = false, [crossfaded, blank()])
 output.icecast(%mp3,
