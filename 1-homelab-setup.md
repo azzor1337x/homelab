@@ -11,7 +11,6 @@
 
 ## 📦 Pré-Instalação: Limpando o Disco
 
-
 1. No instalador do Debian, pressione `Ctrl + Alt + F2` para abrir o terminal.
 2. Execute:
    ```bash
@@ -45,6 +44,12 @@
 | `/usr`   | ext4 | `/dev/mapper/homelab-opt` |
 | swap     | swap | `/dev/mapper/homelab-swap` |
 
+## 🐧 Sistema Operacional
+
+- **Debian 12 Minimal** instalado com:
+  - SSH Server
+  - Standard System Utilities
+    
 ---
 
 ## 🚀 Primeiro boot - Via terminal Local
