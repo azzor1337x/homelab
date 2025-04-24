@@ -125,7 +125,7 @@ sudo reboot
 ## 🐳 Instalar Docker + Docker Compose
 
 ```bash
-sudo apt install iptables btop -y
+sudo apt install -y iptables btop
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove -y $pkg; done
 sudo apt-get update
 sudo apt-get install -y ca-certificates curl
