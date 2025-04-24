@@ -12,7 +12,7 @@ sudo mkdir -p /home/homelab/music
 
 ---
 
-## 📺 metube
+## 📺 MeTube
 
 ```bash
 sudo mkdir -p /opt/metube
