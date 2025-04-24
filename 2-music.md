@@ -2,6 +2,8 @@
 ![MeTube](https://img.shields.io/badge/MeTube-YouTube%20Downloader-red?logo=youtube)
 ![Navidrome](https://img.shields.io/badge/Navidrome-Music%20Server-yellow?logo=musicbrainz)
 
+---
+
 ## 📺 metube
 
 ```bash
