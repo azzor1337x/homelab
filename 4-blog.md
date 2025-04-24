@@ -2,6 +2,8 @@
 ![HTML](https://img.shields.io/badge/HTML-Static_Pages-orange?logo=html5)
 ![Cloudflared](https://img.shields.io/badge/Cloudflared-Tunnel-blue)
 
+---
+
 ## 📝 HTML para Página Principal (blog) e Subdomínio homelab
 
 Crie os arquivos HTML:
