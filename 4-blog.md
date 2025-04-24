@@ -188,10 +188,10 @@ Conteúdo Subdomínio homelab:
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>azzor1337x - Homelab</title>
+  <title>homelab</title>
 </head>
 <body>
-  <h1>azzor1337x</h1>
+  <h1>homelab</h1>
   <p>em construção!</p>
 </body>
 </html>
