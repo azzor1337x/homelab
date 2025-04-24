@@ -11,6 +11,7 @@
 
 ## 📦 Pré-Instalação: Limpando o Disco
 
+
 1. No instalador do Debian, pressione `Ctrl + Alt + F2` para abrir o terminal.
 2. Execute:
    ```bash
