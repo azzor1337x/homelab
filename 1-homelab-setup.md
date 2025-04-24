@@ -83,8 +83,6 @@ sudo nano /etc/udev/rules.d/10-network.rules
 SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="00:e0:4c:68:00:94", NAME="eth0"
 ```
 
----
-
 ```bash
 sudo nano /etc/systemd/network/10-wired.network
 ```
