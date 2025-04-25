@@ -213,10 +213,6 @@ Conteúdo Subdomínio homelab:
       color: #58a6ff;
     }
 
-    .hidden {
-      display: none;
-    }
-
     .hero {
       padding: 4rem 2rem;
       text-align: center;
@@ -265,37 +261,31 @@ Conteúdo Subdomínio homelab:
       margin-top: 4rem;
       color: #8b949e;
     }
-
-    audio {
-      display: none; /* esconde o player */
-    }
   </style>
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="https://radio.azzor1337x.shop/radio.mp3" type="audio/mpeg">
-    Seu navegador não suporta o elemento de áudio.
-  </audio>
 
   <header>
     <a href="#" class="logo">azzor1337x</a>
     <div class="top-buttons">
       <a href="https://github.com/azzor1337x/homelab" target="_blank">GitHub</a>
-      <a id="metubeLink" class="hidden" href="https://youtube.azzor1337x.shop" target="_blank">MeTube</a>
     </div>
   </header>
 
   <section class="hero">
     <h1>Homelab</h1>
     <p>
-      Ola, espero que esteja bem! Esse é meu homelab e acredite eu rodo ele em um notebook antigo, ASUSTeK K43U com processador AMD C-60 de apenas 1GHz, duas memorias DDR3. Nele estão alguns serviços úteis e divertidos para uso pessoal e aprendizado, em breve mais novidades!
+      Olá, espero que esteja bem! Esse é meu homelab e acredite, eu rodo ele em um notebook antigo ASUSTeK K43U com processador AMD C-60 de apenas 1GHz e memórias DDR3. Nele estão alguns serviços para uso pessoal e aprendizado. Em breve, mais novidades!
     </p>
     <div class="button-row">
-      <a class="btn" href="https://radio.azzor1337x.shop/radio.mp3" target="_blank">Rádio</a>
+      <a class="btn" href="https://azzor1337x.shop" target="_blank">Rádio</a>
+      <a class="btn" href="https://radio.azzor1337x.shop/radio.mp3" target="_blank">Stream</a>
+      <a class="btn" href="https://radio.azzor1337x.shop" target="_blank">Icecast</a>     
       <a class="btn" href="https://music.azzor1337x.shop" target="_blank">Navidrome</a>
       <a class="btn" href="https://pihole.azzor1337x.shop/admin/queries" target="_blank">Pi-hole</a>
       <a class="btn" href="https://homelab.azzor1337x.shop" target="_blank">Homelab</a>
       <a class="btn" href="https://portainer.azzor1337x.shop" target="_blank">Portainer</a>
+      <a class="btn" href="https://youtube.azzor1337x.shop" target="_blank">MeTube</a> <!-- Novo botão para MeTube -->
     </div>
   </section>
 
@@ -303,19 +293,6 @@ Conteúdo Subdomínio homelab:
     © 2025 azzor1337x Homelab. Todos os direitos reservados.
   </footer>
 
-  <script>
-    const radio = document.querySelector('audio');
-    if (radio) {
-      radio.volume = 0.05; // Define o volume para 5%
-    }
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key.toLowerCase() === 'm') {
-        const metubeLink = document.getElementById('metubeLink');
-        metubeLink.classList.toggle('hidden');
-      }
-    });
-  </script>
 </body>
 </html>
 ```
