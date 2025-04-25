@@ -1,9 +1,7 @@
 
 ---
 
-## Homelab
-
-Ola, espero que esteja bem! Esse é meu homelab e acredite eu rodo ele em um notebook antigo, ASUSTeK K43U com processador AMD C-60 de apenas 1GHz, duas memorias DDR3. Nele estão alguns serviços úteis e divertidos para uso pessoal e aprendizado, em breve mais novidades!
+## 🛠️ Transformando um notebook antigo em um Homelab 🚀
 
 https://azzor1337x.shop/
 
