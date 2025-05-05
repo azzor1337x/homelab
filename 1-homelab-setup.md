@@ -18,7 +18,7 @@ ip -c a
 
 ## 🔐 Senha root e acesso(via PuTTY)
 
-Usando o IP acima, acesse via Putty usando o usuario criado no momento da instalação:
+Após listar o IP, acesse via Putty usando o usuario criado no momento da instalação:
 ```bash
 sudo passwd root
 su
