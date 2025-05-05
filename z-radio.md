@@ -19,8 +19,7 @@ sudo mkdir -p /opt/liquidsoap
 sudo nano /opt/liquidsoap/docker-compose.yml
 ```
 
-## 📋 docker-compose.yml
-
+Conteúdo:
 ```yaml
 services:
   liquidsoap:
@@ -41,6 +40,7 @@ services:
 sudo nano /opt/liquidsoap/radio.liq
 ```
 
+Conteúdo:
 ```liq
 radio_playlist = playlist(mode="normal", reload_mode="lazy", "/home/music")
 crossfaded = crossfade(fade_in=5.0, fade_out=5.0, radio_playlist)
@@ -68,14 +68,7 @@ sudo docker-compose up -d
 
 ---
 
-
-
-
-
-
-
-
-
+## index.html
 
 ```bash
 <!DOCTYPE html>
