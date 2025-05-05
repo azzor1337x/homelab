@@ -1,8 +1,9 @@
 
 ![HTML](https://img.shields.io/badge/HTML-Static_Pages-orange?logo=html5)
 ![Nginx](https://img.shields.io/badge/Nginx-Web_Server-brightgreen?logo=nginx)
-
 ![Cloudflared](https://img.shields.io/badge/Cloudflared-Tunnel-blue)
+![Icecast2](https://img.shields.io/badge/icecast2-installed-lightgrey?logo=castorama&logoColor=white)
+![Liquidsoap](https://img.shields.io/badge/liquidsoap-v2.3.2-orange?logo=music&logoColor=white)
 
 ---
 
@@ -326,6 +327,7 @@ Conteúdo:
 </body>
 </html>
 ```
+
 ---
 
 ## 🐳 docker-compose para Nginx (blog e homelab)
@@ -393,6 +395,7 @@ Copie o nome do túnel (UUID).
 sudo nano /root/.cloudflared/config.yml
 ```
 
+Conteúdo:
 ```yaml
 tunnel: blog
 credentials-file: /root/.cloudflared/<UUID>.json
@@ -435,12 +438,6 @@ Ou instale como serviço:
 ```bash
 sudo cloudflared service install
 ```
-
----
-
-
-![Icecast2](https://img.shields.io/badge/icecast2-installed-lightgrey?logo=castorama&logoColor=white)
-![Liquidsoap](https://img.shields.io/badge/liquidsoap-v2.3.2-orange?logo=music&logoColor=white)
 
 ---
 
