@@ -1,60 +1,17 @@
 
-![Debian 12](https://img.shields.io/badge/debian-12-lightgrey?logo=debian&logoColor=white)
-![LVM](https://img.shields.io/badge/lvm-setup-purple)
 ![Docker](https://img.shields.io/badge/docker-installed-blue?logo=docker&logoColor=white)
 ![Docker Compose](https://img.shields.io/badge/docker--compose-configured-2496ED?logo=docker&logoColor=white)
 ![Unbound](https://img.shields.io/badge/unbound-dns--resolver-yellow?logo=gnubash&logoColor=black)
 ![Pi-hole](https://img.shields.io/badge/pi--hole-dns%20%2F%20dhcp-red?logo=pi-hole&logoColor=white)
 ![Portainer](https://img.shields.io/badge/portainer-docker--ui-0db7ed?logo=portainer&logoColor=white)
 
-### 🛠️ Transformando um notebook antigo em um Homelab 🚀
-
 ---
 
-## 📦 Pré-Instalação: Limpando o Disco
+## 🚀 Primeiro boot(via terminal local)
 
-1. No instalador do Debian, pressione `Ctrl + Alt + F2` para abrir o terminal.
-2. Execute:
-   ```bash
-   dd if=/dev/zero of=/dev/sda bs=1M count=10
-   ```
-3. Reinicie com `Ctrl + Alt + Del`.
+# 1
 
----
-
-## 🧱 Particionamento Manual com LVM
-
-1. Selecione `Manual` no particionamento.
-2. Crie uma nova partição primária com 119GB e defina como `physical volume for LVM`.
-3. Configure o LVM:
-   - Crie volume group: `homelab`
-   - Crie logical volumes:
-     - `root` → 10 GB
-     - `home` → 10 GB
-     - `var` → 10 GB
-     - `opt` → 10 GB
-     - `usr` → 10 GB
-     - `swap` → 2 GB
-4. Defina os pontos de montagem:
-
-| Montagem | Tipo | Dispositivo |
-|----------|------|-------------|
-| `/`      | ext4 | `/dev/mapper/homelab-root` |
-| `/home`  | ext4 | `/dev/mapper/homelab-home` |
-| `/var`   | ext4 | `/dev/mapper/homelab-var` |
-| `/opt`   | ext4 | `/dev/mapper/homelab-opt` |
-| `/usr`   | ext4 | `/dev/mapper/homelab-opt` |
-| swap     | swap | `/dev/mapper/homelab-swap` |
-
-## 🐧 Sistema Operacional
-
-- **Debian 12 Minimal** instalado com:
-  - SSH Server
-  - Standard System Utilities
-    
----
-
-## 🚀 Primeiro boot - Via terminal Local
+### 3
 
 ```bash
 ip -c a
@@ -62,15 +19,11 @@ ip -c a
 
 ---
 
-## 🔐 Senha root e Timezone - Via PuTTY
+## 🔐 Usando o IP acima, acesse Senha root e Timezone - Via PuTTY
 
 ```bash
 sudo passwd root
 su
-```
-
-```bash
-sudo timedatectl set-timezone America/Sao_Paulo
 ```
 
 ---
