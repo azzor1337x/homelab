@@ -42,7 +42,7 @@ sudo nano /opt/liquidsoap/radio.liq
 ```
 
 ```liq
-radio_playlist = playlist(mode="normal", reload_mode="watch", "/home/music")
+radio_playlist = playlist(mode="normal", reload_mode="lazy", "/home/music")
 crossfaded = crossfade(fade_in=5.0, fade_out=5.0, radio_playlist)
 crossfaded = amplify(0.5, crossfaded)
 radio = fallback(track_sensitive = false, [crossfaded, blank()])
@@ -51,9 +51,9 @@ output.icecast(%mp3,
   port = 8000,
   password = "hackme",
   mount = "/radio.mp3",
-  name = "homelab",
-  description = "radio",
-  genre = "music",
+  name = "radio",
+  description = "em costrução",
+  genre = "louvor",
   url = "http://radio.azzor1337x.shop/radio.mp3",
   public = true,
   radio)
