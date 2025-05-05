@@ -58,7 +58,7 @@ services:
     container_name: metube
     restart: unless-stopped
     ports:
-      - "8081:8081"
+      - "8088:8088"
     volumes:
       - /home/homelab/music:/downloads
 ```
