@@ -1,10 +1,10 @@
 
-![Liquidsoap](https://img.shields.io/badge/liquidsoap-2.0-blue?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAwQzUuMzcgMCAwIDUuMzcgMCAxMnM1LjM3IDEyIDEyIDEyIDEyLTUuMzcgMTItMTJTMTguNjMgMCAxMiAwbTAgMS43NWM1LjYxIDAgMTAuMjUgNC42NCAxMC4yNSAxMC4yNVMxNy42MSAyMi4yNSAxMiAyMi4yNVMxLjc1IDE3LjYxIDEuNzUgMTIgNi4zOSAxLjc1IDEyIDEuNzVtLTEuNSA0LjV2MTIuNWgzdjEyLjVIMTJjLTQuMTQgMC03LjUtMy4zNi03LjUtNy41aDMuMjVjMCAyLjM2IDEuODkgNC4yNSA0LjI1IDQuMjVzNC4yNS0xLjg5IDQuMjUtNC4yNUgxOEMxOCA4LjgxIDE1LjE5IDYgMTIgNnYxLjVoLTF6Ii8+PC9zdmc+&logoColor=white)
-![Icecast](https://img.shields.io/badge/icecast-2.4-blue?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAwQzUuMzcgMCAwIDUuMzcgMCAxMnM1LjM3IDEyIDEyIDEyIDEyLTUuMzcgMTItMTJTMTguNjMgMCAxMiAwbTAgMS43NWM1LjYxIDAgMTAuMjUgNC42NCAxMC4yNSAxMC4yNVMxNy42MSAyMi4yNSAxMiAyMi4yNVMxLjc1IDE3LjYxIDEuNzUgMTIgNi4zOSAxLjc1IDEyIDEuNzVtLTYuNSA0LjV2MTJoMTN2LTEySDUuNXptMS41IDEuNWg0djloLTR2LTl6bTYgMGg0djlIMTJ2LTl6Ii8+PC9zdmc+&logoColor=white)
+![Icecast2](https://img.shields.io/badge/icecast2-installed-lightgrey?logo=castorama&logoColor=white)
+![Liquidsoap](https://img.shields.io/badge/liquidsoap-v2.3.2-orange?logo=music&logoColor=white)
 
 ---
 
-## 🌐 Instalar Icecast2
+## 🌐 Icecast2
 
 ```bash
 sudo apt install -y icecast2
@@ -12,7 +12,7 @@ sudo apt install -y icecast2
 
 ---
 
-## 🎧 Liquidsoap
+## 🎧 Liquidsoap v2.3.2
 
 ```bash
 sudo mkdir -p /opt/liquidsoap
