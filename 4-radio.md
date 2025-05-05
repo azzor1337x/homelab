@@ -273,7 +273,7 @@ self.addEventListener('fetch', event => {
 });
 ```
 
-## 📝 imagens.png
+## 📁 imagens.png
 
 ```bash
 screenshot-mobile.png
