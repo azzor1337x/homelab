@@ -9,18 +9,16 @@
 
 ## 🚀 Primeiro boot(via terminal local)
 
-# 1
-
-### 3
-
+Logar usando o usuario criado no momento da instalação e listar o IP:
 ```bash
 ip -c a
 ```
 
 ---
 
-## 🔐 Usando o IP acima, acesse Senha root e Timezone - Via PuTTY
+## 🔐 Senha root e acesso(via PuTTY)
 
+Usando o IP acima, acesse via Putty usando o usuario criado no momento da instalação:
 ```bash
 sudo passwd root
 su
