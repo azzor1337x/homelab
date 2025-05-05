@@ -9,8 +9,8 @@
 ## 📝 Página Principal (radio)
 
 ```bash
-sudo mkdir -p /opt/blog
-sudo nano /opt/blog/index.html
+sudo mkdir -p /opt/radio
+sudo nano /opt/radio/index.html
 ```
 
 Conteúdo:
@@ -182,7 +182,7 @@ Conteúdo:
 ## 📝 manifest.json
 
 ```bash
-sudo nano /opt/blog/manifest.json
+sudo nano /opt/radio/manifest.json
 ```
 
 Conteúdo:
@@ -225,7 +225,7 @@ Conteúdo:
 ## 📝 sw.js
 
 ```bash
-sudo nano /opt/blog/sw.js
+sudo nano /opt/radio/sw.js
 ```
 
 Conteúdo:
@@ -235,8 +235,8 @@ const URLS_TO_CACHE = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png'
+  '/icon-192.png',
+  '/icon-512.png'
 ];
 
 // Instala e adiciona arquivos ao cache
@@ -273,29 +273,38 @@ self.addEventListener('fetch', event => {
 });
 ```
 
+## 📝 imagens.png
+
+```bash
+screenshot-mobile.png
+screenshot-desktop.png
+icon-512.png
+icon-192.png
+```
+
 ---
 
 ## 🐳 Nginx (radio)
 
 ```bash
-sudo nano /opt/blog/docker-compose.yml
+sudo nano /opt/radio/docker-compose.yml
 ```
 
 Conteúdo:
 ```yaml
 services:
-  blog:
+  radio:
     image: nginx:alpine
-    container_name: web_blog
+    container_name: radio
     ports:
-      - "8082:80"
+      - "8089:80"
     volumes:
       - .:/usr/share/nginx/html:ro
     restart: unless-stopped
 ```
 
 ```bash
-cd /opt/blog
+cd /opt/radio
 sudo docker-compose up -d
 ```
 
@@ -312,8 +321,8 @@ sudo apt install -y icecast2
 ## 🎧 Liquidsoap v2.3.2
 
 ```bash
-sudo mkdir -p /opt/liquidsoap
-sudo nano /opt/liquidsoap/docker-compose.yml
+sudo mkdir -p /opt/radio/liquidsoap
+sudo nano /opt/radio/liquidsoap/docker-compose.yml
 ```
 
 Conteúdo:
@@ -334,7 +343,7 @@ services:
 ## 🎵 radio.liq (Liquidsoap)
 
 ```bash
-sudo nano /opt/liquidsoap/radio.liq
+sudo nano /opt/radio/liquidsoap/radio.liq
 ```
 
 Conteúdo:
@@ -350,7 +359,6 @@ output.icecast(%mp3,
   mount = "/radio.mp3",
   name = "radio",
   description = "em costrução",
-  genre = "louvor",
   url = "http://radio.azzor1337x.shop/radio.mp3",
   public = true,
   radio)
@@ -359,7 +367,7 @@ output.icecast(%mp3,
 ```bash
 sudo systemctl enable icecast2
 sudo systemctl start icecast2
-cd /opt/liquidsoap
+cd /opt/radio/liquidsoap
 sudo docker-compose up -d
 ```
 
