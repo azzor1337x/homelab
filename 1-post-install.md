@@ -53,7 +53,7 @@ DNS=192.168.1.1
 
 ---
 
-## 🌐 resolv.conf
+## 🌐 DNS (resolv.conf)
 
 ```bash
 sudo rm /etc/resolv.conf
