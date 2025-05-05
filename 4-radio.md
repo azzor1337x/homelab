@@ -6,7 +6,7 @@
 
 ---
 
-## 📝 Página Principal (blog)
+## 📝 Página Principal (radio)
 
 ```bash
 sudo mkdir -p /opt/blog
@@ -275,7 +275,7 @@ self.addEventListener('fetch', event => {
 
 ---
 
-## 🐳 docker-compose para Nginx (blog e homelab)
+## 🐳 Nginx (radio)
 
 ```bash
 sudo nano /opt/blog/docker-compose.yml
