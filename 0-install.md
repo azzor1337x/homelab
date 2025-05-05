@@ -36,7 +36,7 @@
 | `/home`  | ext4 | `/dev/mapper/homelab-home` |
 | `/var`   | ext4 | `/dev/mapper/homelab-var` |
 | `/opt`   | ext4 | `/dev/mapper/homelab-opt` |
-| `/usr`   | ext4 | `/dev/mapper/homelab-opt` |
+| `/usr`   | ext4 | `/dev/mapper/homelab-usr` |
 | `swap`     | swap | `/dev/mapper/homelab-swap` |
 
 ---
@@ -48,15 +48,3 @@
   - Standard System Utilities
     
 ---
-
-
-passo a passo
-
-
-
-
-
-
-
-
-
