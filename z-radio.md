@@ -4,7 +4,7 @@
 
 ---
 
-## 🌐 Icecast2
+## 📡 Icecast2
 
 ```bash
 sudo apt install -y icecast2
