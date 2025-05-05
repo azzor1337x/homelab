@@ -77,7 +77,7 @@ sudo docker-compose up -d
 
 
 
-
+```bash
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -219,4 +219,4 @@ sudo docker-compose up -d
   </script>
 </body>
 </html>
-
+```
