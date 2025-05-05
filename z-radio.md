@@ -197,10 +197,31 @@ sudo docker-compose up -d
     });
 
     async function getDailyVerseFromAPI() {
+      const verses = [
+        "Salmos 100:4",
+        "Salmos 150:6",
+        "Salmos 95:1",
+        "Salmos 103:1",
+        "Salmos 147:1",
+        "Hebreus 13:15",
+        "Efésios 5:19",
+        "Isaías 25:1",
+        "Apocalipse 5:13",
+        "Salmos 34:1"
+      ];
+
+      const randomVerse = verses[Math.floor(Math.random() * verses.length)];
+      const url = `https://bible-api.com/${encodeURIComponent(randomVerse)}?translation=almeida`;
+
       try {
-        const response = await fetch("https://bible-api.com/John+3:16");
+        const response = await fetch(url);
         const data = await response.json();
-        document.getElementById('bibleVerse').textContent = `${data.text.trim()} — ${data.reference}`;
+
+        if (data && data.text) {
+          document.getElementById('bibleVerse').textContent = `${data.text.trim()} — ${data.reference}`;
+        } else {
+          throw new Error("Resposta inválida da API.");
+        }
       } catch (error) {
         console.error("Erro ao carregar versículo:", error);
         document.getElementById('bibleVerse').textContent = "Não foi possível carregar o versículo.";
