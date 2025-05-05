@@ -1,4 +1,5 @@
 
+![root](https://img.shields.io/badge/root-superuser-red?logo=linux&logoColor=white)
 ![systemd](https://img.shields.io/badge/systemd-init%20system-blue?logo=linux&logoColor=white)
 ![resolv.conf](https://img.shields.io/badge/resolv.conf-DNS%20Config-orange?logo=gnu-linux&logoColor=white)
 
