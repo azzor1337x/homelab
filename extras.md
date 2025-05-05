@@ -4,13 +4,15 @@
 
 ---
 
+## 📊 Timezone
+
 ```bash
 sudo timedatectl set-timezone America/Sao_Paulo
 ```
 
 ---
 
-## 📊 Instalar Portainer
+## 📊 Portainer
 
 ```bash
 sudo mkdir -p /opt/portainer
