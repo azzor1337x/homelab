@@ -62,3 +62,11 @@ sudo docker-compose version
 ```
 
 ---
+
+## Reboot
+
+```bash
+sudo reboot
+```
+
+---
