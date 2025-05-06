@@ -1,5 +1,6 @@
 
 ![Timezone](https://img.shields.io/badge/timezone-America%2FSao_Paulo-green?logo=clockify&logoColor=white)
+![FileBrowser](https://img.shields.io/badge/FileBrowser-Web_Manager-blue?logo=files&logoColor=white)
 ![Portainer](https://img.shields.io/badge/portainer-docker--ui-0db7ed?logo=portainer&logoColor=white)
 ![MeTube](https://img.shields.io/badge/MeTube-YouTube%20Downloader-red?logo=youtube)
 ![Navidrome](https://img.shields.io/badge/Navidrome-Music%20Server-yellow?logo=musicbrainz)
@@ -10,6 +11,15 @@
 
 ```bash
 sudo timedatectl set-timezone America/Sao_Paulo
+```
+
+---
+
+## 📁 Filebrowser
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
+filebrowser -a 0.0.0.0 -p 8888 -r /
 ```
 
 ---
