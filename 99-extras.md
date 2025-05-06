@@ -18,6 +18,8 @@ sudo timedatectl set-timezone America/Sao_Paulo
 ## 📁 Filebrowser
 
 ```bash
+sudo mkdir -p /opt/filebrowser
+cd /opt/filebrowser
 curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
 filebrowser -a 0.0.0.0 -p 8888 -r /
 ```
