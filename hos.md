@@ -90,3 +90,133 @@ A ISO final estará no diretório `images/`.
 ---
 
 Você pode versionar tudo isso no GitHub, facilitando reproduções e modificações futuras.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Customização Visual da ISO - HomelabOS
+
+## Objetivo
+
+Personalizar a aparência da ISO gerada com Simple-CDD, incluindo:
+
+* Nome do sistema (branding)
+* Mensagem de boas-vindas (motd)
+* Tela de boot (ISOLINUX/GRUB)
+* Nome do arquivo ISO final
+
+---
+
+## 1. Renomear a ISO gerada
+
+Após rodar o build:
+
+```bash
+mv images/debian-*.iso images/homelabos.iso
+```
+
+---
+
+## 2. Adicionar mensagem de boas-vindas (motd)
+
+Crie o arquivo `motd` com seu texto personalizado:
+
+```bash
+echo 'Bem-vindo ao HomelabOS - Debian minimal customizado para homelabs' > motd
+```
+
+Inclua no `late_command` do `preseed.cfg`:
+
+```ini
+d-i preseed/late_command string \
+  in-target curl -fsSL https://get.docker.com | sh ; \
+  echo "Bem-vindo ao HomelabOS - Debian minimal customizado para homelabs" > /target/etc/motd ;
+```
+
+---
+
+## 3. Personalizar /etc/os-release
+
+No mesmo `late_command`, adicione:
+
+```bash
+in-target sed -i 's/^NAME=.*/NAME="HomelabOS"/' /etc/os-release
+in-target sed -i 's/^PRETTY_NAME=.*/PRETTY_NAME="HomelabOS (Debian Based)"/' /etc/os-release
+```
+
+Ou substitua todo o arquivo com um customizado:
+
+```bash
+echo 'NAME="HomelabOS"
+VERSION="1.0"
+ID=homelabos
+PRETTY_NAME="HomelabOS (Debian Based)"
+HOME_URL="https://github.com/seuusuario/homelabos"
+' > os-release
+
+cp os-release /target/etc/os-release
+```
+
+---
+
+## 4. Customizar tela de boot (avancado)
+
+### a) Montar ISO para edição
+
+```bash
+mkdir iso-root
+sudo mount -o loop images/homelabos.iso iso-root
+cp -r iso-root custom-iso
+sudo umount iso-root
+```
+
+### b) Alterar ISOLINUX (modo BIOS)
+
+Dentro de `custom-iso/isolinux/isolinux.cfg`, altere:
+
+```cfg
+UI gfxboot bootlogo
+DEFAULT install
+PROMPT 0
+TIMEOUT 50
+LABEL install
+  menu label ^Install HomelabOS
+```
+
+Pode substituir o `bootlogo` com imagem personalizada (formato .cfg ou .rle dependendo da config).
+
+### c) Reempacotar ISO
+
+```bash
+cd custom-iso
+sudo apt install xorriso isolinux syslinux-common
+xorriso -as mkisofs -o ../homelabos-custom.iso \
+  -isohybrid-mbr /usr/lib/ISOLINUX/isohdpfx.bin \
+  -c isolinux/boot.cat -b isolinux/isolinux.bin \
+  -no-emul-boot -boot-load-size 4 -boot-info-table \
+  -V "HOMELABOS" .
+```
+
+---
+
+## Resultado
+
+Uma ISO com identidade visual personalizada:
+
+* Nome e descrição na inicialização
+* Tela de boot com "HomelabOS"
+* Motd e /etc/os-release com branding
+* Nome do arquivo: `homelabos-custom.iso`
+
+Pronto para gravar no USB e instalar com estilo!
+
