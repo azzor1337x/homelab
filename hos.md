@@ -58,9 +58,13 @@ d-i passwd/root-login boolean true
 d-i passwd/make-user boolean false
 d-i pkgsel/include string openssh-server sudo curl ca-certificates net-tools iproute2
 
-# Comando de pós-instalação (opcional)
+# Comando de pós-instalação
+
 d-i preseed/late_command string \
-  in-target curl -fsSL https://get.docker.com | sh ;
+  in-target curl -fsSL https://get.docker.com | sh ; \
+  echo "Bem-vindo ao HomelabOS - Debian minimal customizado para homelabs" > /target/etc/motd ; \
+  in-target sed -i 's/^NAME=.*/NAME="HomelabOS"/' /etc/os-release ; \
+  in-target sed -i 's/^PRETTY_NAME=.*/PRETTY_NAME="HomelabOS (Debian Based)"/' /etc/os-release ;
 ```
 
 #### Explicações
@@ -74,7 +78,7 @@ d-i preseed/late_command string \
   * Pode adicionar criptografia com `method string crypto`.
 * **passwd:** Habilita login root, sem usuário comum.
 * **pkgsel/include:** Pacotes a instalar além da base mínima.
-* **late\_command:** Roda comandos no sistema instalado (ex: instalar Docker).
+* **late\_command:** Executa ações como instalação do Docker, motd e branding.
 
 ### 4. Gerar a ISO personalizada
 
@@ -83,43 +87,7 @@ sudo apt install simple-cdd
 build-simple-cdd --profiles hos --local-packages . --auto
 ```
 
-### Resultado
-
-A ISO final estará no diretório `images/`.
-
----
-
-Você pode versionar tudo isso no GitHub, facilitando reproduções e modificações futuras.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Customização Visual da ISO - HomelabOS
-
-## Objetivo
-
-Personalizar a aparência da ISO gerada com Simple-CDD, incluindo:
-
-* Nome do sistema (branding)
-* Mensagem de boas-vindas (motd)
-* Tela de boot (ISOLINUX/GRUB)
-* Nome do arquivo ISO final
-
----
-
-## 1. Renomear a ISO gerada
-
-Após rodar o build:
+### 5. Renomear a ISO gerada
 
 ```bash
 mv images/debian-*.iso images/homelabos.iso
@@ -127,51 +95,9 @@ mv images/debian-*.iso images/homelabos.iso
 
 ---
 
-## 2. Adicionar mensagem de boas-vindas (motd)
+## Customização visual avançada (opcional)
 
-Crie o arquivo `motd` com seu texto personalizado:
-
-```bash
-echo 'Bem-vindo ao HomelabOS - Debian minimal customizado para homelabs' > motd
-```
-
-Inclua no `late_command` do `preseed.cfg`:
-
-```ini
-d-i preseed/late_command string \
-  in-target curl -fsSL https://get.docker.com | sh ; \
-  echo "Bem-vindo ao HomelabOS - Debian minimal customizado para homelabs" > /target/etc/motd ;
-```
-
----
-
-## 3. Personalizar /etc/os-release
-
-No mesmo `late_command`, adicione:
-
-```bash
-in-target sed -i 's/^NAME=.*/NAME="HomelabOS"/' /etc/os-release
-in-target sed -i 's/^PRETTY_NAME=.*/PRETTY_NAME="HomelabOS (Debian Based)"/' /etc/os-release
-```
-
-Ou substitua todo o arquivo com um customizado:
-
-```bash
-echo 'NAME="HomelabOS"
-VERSION="1.0"
-ID=homelabos
-PRETTY_NAME="HomelabOS (Debian Based)"
-HOME_URL="https://github.com/seuusuario/homelabos"
-' > os-release
-
-cp os-release /target/etc/os-release
-```
-
----
-
-## 4. Customizar tela de boot (avancado)
-
-### a) Montar ISO para edição
+### 6. Personalizar tela de boot (modo BIOS com ISOLINUX)
 
 ```bash
 mkdir iso-root
@@ -180,9 +106,7 @@ cp -r iso-root custom-iso
 sudo umount iso-root
 ```
 
-### b) Alterar ISOLINUX (modo BIOS)
-
-Dentro de `custom-iso/isolinux/isolinux.cfg`, altere:
+Altere `custom-iso/isolinux/isolinux.cfg`:
 
 ```cfg
 UI gfxboot bootlogo
@@ -193,9 +117,9 @@ LABEL install
   menu label ^Install HomelabOS
 ```
 
-Pode substituir o `bootlogo` com imagem personalizada (formato .cfg ou .rle dependendo da config).
+Você pode substituir `bootlogo` por uma imagem personalizada.
 
-### c) Reempacotar ISO
+### 7. Reempacotar a ISO customizada
 
 ```bash
 cd custom-iso
@@ -207,9 +131,7 @@ xorriso -as mkisofs -o ../homelabos-custom.iso \
   -V "HOMELABOS" .
 ```
 
----
-
-## Resultado
+### Resultado final
 
 Uma ISO com identidade visual personalizada:
 
@@ -220,3 +142,6 @@ Uma ISO com identidade visual personalizada:
 
 Pronto para gravar no USB e instalar com estilo!
 
+---
+
+Você pode versionar tudo isso no GitHub, facilitando reproduções e modificações futuras.
