@@ -1,16 +1,19 @@
-Documentação do HOS - ISO Personalizada Debian
+# Documentação do HOS - ISO Personalizada Debian
 
-Passos para preparar a customização
+## Passos para preparar a customização
 
-1. Criar estrutura de diretórios
+### 1. Criar estrutura de diretórios
 
+```bash
 mkdir -p hos-simple-cdd/profiles
 cd hos-simple-cdd
+```
 
-2. Criar arquivo de perfil
+### 2. Criar arquivo de perfil
 
-Salve o seguinte conteúdo em profiles/hos.profile:
+Salve o seguinte conteúdo em `profiles/hos.profile`:
 
+```ini
 profile: hos
 packages: openssh-server sudo curl ca-certificates net-tools iproute2
 default_language: en_US
@@ -19,30 +22,25 @@ timezone: UTC
 user-fullname: root
 user-uid: 1000
 user-password: toor
+```
 
-Explicações
+#### Explicações
 
-profile: Define o nome do perfil usado na ISO. Deve corresponder ao nome do arquivo.
+* **profile:** Define o nome do perfil usado na ISO. Deve corresponder ao nome do arquivo.
+* **packages:** Lista os pacotes a serem instalados junto com o sistema base.
 
-packages: Lista os pacotes a serem instalados junto com o sistema base.
+  * Pode adicionar pacotes como `git`, `vim`, `iptables`, `docker-ce`, etc.
+  * Pode remover `net-tools` se quiser usar somente ferramentas modernas (ex: `ip` ao invés de `ifconfig`).
+* **default\_language / keyboard / timezone:** Define idioma, layout de teclado e fuso horário padrão.
+* **user-fullname / user-uid / user-password:** Cria um usuário automático com nome, UID e senha.
 
-Pode adicionar pacotes como git, vim, iptables, docker-ce, etc.
+  * A senha está em texto puro; para maior segurança, use uma hash criptografada (ex: SHA-512).
 
-Pode remover net-tools se quiser usar somente ferramentas modernas (ex: ip ao invés de ifconfig).
+### 3. Criar arquivo `preseed.cfg`
 
+Salve o seguinte conteúdo na raiz como `preseed.cfg`:
 
-default_language / keyboard / timezone: Define idioma, layout de teclado e fuso horário padrão.
-
-user-fullname / user-uid / user-password: Cria um usuário automático com nome, UID e senha.
-
-A senha está em texto puro; para maior segurança, use uma hash criptografada (ex: SHA-512).
-
-
-
-3. Criar arquivo preseed.cfg
-
-Salve o seguinte conteúdo na raiz como preseed.cfg:
-
+```ini
 d-i debian-installer/locale string en_US.UTF-8
 d-i console-setup/ask_detect boolean false
 d-i keyboard-configuration/xkb-keymap select us
@@ -62,40 +60,32 @@ d-i pkgsel/include string openssh-server sudo curl ca-certificates net-tools ipr
 # Comando de pós-instalação (opcional)
 d-i preseed/late_command string \
   in-target curl -fsSL https://get.docker.com | sh ;
+```
 
-Explicações
+#### Explicações
 
-locale / keyboard: Define idioma e teclado.
+* **locale / keyboard:** Define idioma e teclado.
+* **netcfg:** Configura rede via DHCP, hostname e domínio.
+* **clock-setup / time/zone:** Define uso de UTC e fuso horário.
+* **partman:** Usa particionamento automático ("atomic").
 
-netcfg: Configura rede via DHCP, hostname e domínio.
+  * Pode trocar "regular" por "lvm".
+  * Pode adicionar criptografia com `method string crypto`.
+* **passwd:** Habilita login root, sem usuário comum.
+* **pkgsel/include:** Pacotes a instalar além da base mínima.
+* **late\_command:** Roda comandos no sistema instalado (ex: instalar Docker).
 
-clock-setup / time/zone: Define uso de UTC e fuso horário.
+### 4. Gerar a ISO personalizada
 
-partman: Usa particionamento automático ("atomic").
-
-Pode trocar "regular" por "lvm".
-
-Pode adicionar criptografia com method string crypto.
-
-
-passwd: Habilita login root, sem usuário comum.
-
-pkgsel/include: Pacotes a instalar além da base mínima.
-
-late_command: Roda comandos no sistema instalado (ex: instalar Docker).
-
-
-4. Gerar a ISO personalizada
-
+```bash
 sudo apt install simple-cdd
 build-simple-cdd --profiles hos --local-packages . --auto
+```
 
-Resultado
+### Resultado
 
-A ISO final estará no diretório images/.
-
+A ISO final estará no diretório `images/`.
 
 ---
 
 Você pode versionar tudo isso no GitHub, facilitando reproduções e modificações futuras.
-
