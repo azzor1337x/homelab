@@ -16,6 +16,7 @@ Salve o seguinte conteúdo em `profiles/hos.profile`:
 ```ini
 profile: hos
 packages: openssh-server sudo curl ca-certificates net-tools iproute2
+install-recommends: false
 default_language: en_US
 keyboard: us
 timezone: UTC
