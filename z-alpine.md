@@ -1,4 +1,16 @@
 
+![Nano](https://img.shields.io/badge/Nano-Text_Editor-lightgrey?logo=gnu&logoColor=white)
+![Unbound](https://img.shields.io/badge/unbound-dns--resolver-yellow?logo=gnubash&logoColor=black)
+![bind-tools](https://img.shields.io/badge/bind--tools-dns--tools-blue?logo=gnubash&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Installed_Tool-blue?logo=docker&logoColor=white)
+![Portainer](https://img.shields.io/badge/Portainer-Web_UI-0db7ed?logo=portainer&logoColor=white)
+![Pi-hole](https://img.shields.io/badge/pi--hole-dns%20%2F%20dhcp-red?logo=pi-hole&logoColor=white)
+![Internet](https://img.shields.io/badge/Internet-Connectivity-green?logo=internet-explorer&logoColor=white)
+![DNS](https://img.shields.io/badge/DNS-Resolver-blue?logo=dns&logoColor=white)
+![btop](https://img.shields.io/badge/btop-system--monitoring-00A8A8?logo=github&logoColor=white)
+![fastfetch](https://img.shields.io/badge/fastfetch-system--info-29B0D0?logo=github&logoColor=white)
+
+
 # Editor de Texto
 
 ```
