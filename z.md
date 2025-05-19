@@ -1,3 +1,30 @@
+![root](https://img.shields.io/badge/root-superuser-red?logo=linux&logoColor=white)
+![systemd](https://img.shields.io/badge/systemd-init%20system-blue?logo=linux&logoColor=white)
+![resolv.conf](https://img.shields.io/badge/resolv.conf-DNS%20Config-orange?logo=gnu-linux&logoColor=white)
+
+![iptables](https://img.shields.io/badge/iptables-firewall-important?logo=linux&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-installed-blue?logo=docker&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/docker--compose-configured-2496ED?logo=docker&logoColor=white)
+
+
+![Unbound](https://img.shields.io/badge/unbound-dns--resolver-yellow?logo=gnubash&logoColor=black)
+![Pi-hole](https://img.shields.io/badge/pi--hole-dns%20%2F%20dhcp-red?logo=pi-hole&logoColor=white)
+
+![HTML](https://img.shields.io/badge/HTML-Static_Pages-orange?logo=html5)
+![Nginx](https://img.shields.io/badge/Nginx-Web_Server-brightgreen?logo=nginx)
+![Icecast2](https://img.shields.io/badge/icecast2-installed-lightgrey?logo=castorama&logoColor=white)
+![Liquidsoap](https://img.shields.io/badge/liquidsoap-v2.3.2-orange?logo=music&logoColor=white)
+
+![Cloudflared](https://img.shields.io/badge/Cloudflared-Tunnel-blue)
+
+![Timezone](https://img.shields.io/badge/timezone-America%2FSao_Paulo-green?logo=clockify&logoColor=white)
+![FileBrowser](https://img.shields.io/badge/FileBrowser-Web_Manager-blue?logo=files&logoColor=white)
+![Portainer](https://img.shields.io/badge/portainer-docker--ui-0db7ed?logo=portainer&logoColor=white)
+![MeTube](https://img.shields.io/badge/MeTube-YouTube%20Downloader-red?logo=youtube)
+![Navidrome](https://img.shields.io/badge/Navidrome-Music%20Server-yellow?logo=musicbrainz)
+
+
+
 ## 📦 Pré-Instalação: Limpando o Disco
 
 1. No instalador do Debian, pressione `Ctrl + Alt + F2` para abrir o terminal.
