@@ -9,16 +9,11 @@
 ![Unbound](https://img.shields.io/badge/unbound-dns--resolver-yellow?logo=gnubash&logoColor=black)
 ![Pi-hole](https://img.shields.io/badge/pi--hole-dns%20%2F%20dhcp-red?logo=pi-hole&logoColor=white)
 
-![HTML](https://img.shields.io/badge/HTML-Static_Pages-orange?logo=html5)
-![Nginx](https://img.shields.io/badge/Nginx-Web_Server-brightgreen?logo=nginx)
-![Icecast2](https://img.shields.io/badge/icecast2-installed-lightgrey?logo=castorama&logoColor=white)
-![Liquidsoap](https://img.shields.io/badge/liquidsoap-v2.3.2-orange?logo=music&logoColor=white)
 
-![Cloudflared](https://img.shields.io/badge/Cloudflared-Tunnel-blue)
+![HTML](https://img.shields.io/badge/HTML-Static_Pages-orange?logo=html5&logoColor=white)
+
 
 ![Timezone](https://img.shields.io/badge/timezone-America%2FSao_Paulo-green?logo=clockify&logoColor=white)
-![FileBrowser](https://img.shields.io/badge/FileBrowser-Web_Manager-blue?logo=files&logoColor=white)
-![MeTube](https://img.shields.io/badge/MeTube-YouTube%20Downloader-red?logo=youtube)
 ![Navidrome](https://img.shields.io/badge/Navidrome-Music%20Server-yellow?logo=musicbrainz)
 
 
