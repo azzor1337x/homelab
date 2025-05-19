@@ -185,6 +185,15 @@ apk add btop
 apk add fastfetch
 ```
 
+```
+nano /etc/profile
+```
+
+Adicionar entre fi e for:
+```
+fastfetch --pipe > /etc/motd
+```
+
 # Finalizar!
 
 ```
