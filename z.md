@@ -3,7 +3,6 @@
 ![resolv.conf](https://img.shields.io/badge/resolv.conf-DNS%20Config-orange?logo=gnu-linux&logoColor=white)
 
 ![iptables](https://img.shields.io/badge/iptables-firewall-important?logo=linux&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-installed-blue?logo=docker&logoColor=white)
 ![Docker Compose](https://img.shields.io/badge/docker--compose-configured-2496ED?logo=docker&logoColor=white)
 
 
@@ -19,7 +18,6 @@
 
 ![Timezone](https://img.shields.io/badge/timezone-America%2FSao_Paulo-green?logo=clockify&logoColor=white)
 ![FileBrowser](https://img.shields.io/badge/FileBrowser-Web_Manager-blue?logo=files&logoColor=white)
-![Portainer](https://img.shields.io/badge/portainer-docker--ui-0db7ed?logo=portainer&logoColor=white)
 ![MeTube](https://img.shields.io/badge/MeTube-YouTube%20Downloader-red?logo=youtube)
 ![Navidrome](https://img.shields.io/badge/Navidrome-Music%20Server-yellow?logo=musicbrainz)
 
